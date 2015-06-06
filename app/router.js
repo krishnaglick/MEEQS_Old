@@ -13,8 +13,8 @@ Router.map(function() {
     this.route('user-favourites', { path: '/user/:id/favourites' });
 
     this.route('restaurants', { path: '/restaurants'});
-    this.route('restaurant', { path: '/restaurants/:id'});
-    this.route('restaurant-rate', { path: '/restaurants/:id/rate' });
+    this.route('restaurant', { path: '/restaurant/:id'});
+    this.route('restaurant-rate', { path: '/restaurant/:id/rate' });
 });
 
 export default Router;

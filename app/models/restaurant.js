@@ -1,18 +1,17 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-    lat: DS.attr(''),
-    name: DS.attr('string'),
-    description: DS.attr('string'),
-    ethnicity: DS.attr('string'),
-
+    rating: DS.attr('number'),//overall
     ratings: DS.hasMany('rating'),
+
+    ethnicity: DS.attr(),
 
     //google places api details
     placeId: DS.attr('string'),
-    lat: DS.attr('float'),
-    lng: DS.attr('float'),
+    lat: DS.attr('number'),
+    lng: DS.attr('number'),
     name: DS.attr('string'),
+    description: DS.attr('string'),
     country: DS.attr('string'),
     city: DS.attr('string'),
     state: DS.attr('string'),
@@ -22,12 +21,12 @@ export default DS.Model.extend({
     hours: DS.attr(),
     open_now: DS.attr('boolean'),
     permanently_closed: DS.attr('boolean'),
-    priceLevel: DS.attr('integer'),
+    priceLevel: DS.attr('number'),
     website: DS.attr('string'),
-    utcOffset: DS.attr(),//unsure on a type for this one
+    utcOffset: DS.attr(),
 
-    googleRating: DS.attr('float'),
+    googleRating: DS.attr('number'),
     googleReviews: DS.attr(),
     googlePhotos: DS.attr(),
-    googleTypes: DS.attr(),
+    googleTypes: DS.attr()
 });
