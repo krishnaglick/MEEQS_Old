@@ -1,0 +1,11 @@
+<div id="restaurants">
+  {{#each model as |restaurant|}}
+    <div class="ui segment">
+      {{#link-to "restaurant" restaurant }}
+        {{ restaurant.name }}
+      {{/link-to}}
+
+      {{link-to "Rate" "restaurant-rate" post class="ui button" }}
+    </div>
+  {{/each }}
+</div>
