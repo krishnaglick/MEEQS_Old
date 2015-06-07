@@ -10,6 +10,10 @@ module.exports = {
       return [ "userID", "isAdmin" ];
   },
 
+  find: (data) => {
+    return data;
+  },
+
   attributes: {
   	userID: {
   		type: 'integer',
