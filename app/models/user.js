@@ -1,9 +1,13 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+    userID: DS.attr('number'),
     username: DS.attr('string'),
     email: DS.attr('string'),
-    verified: DS.attr('boolean', {
+    isVerified: DS.attr('boolean', {
+        defaultValue: false
+    }),
+    isAdmin: DS.attr('boolean', {
         defaultValue: false
     }),
 
